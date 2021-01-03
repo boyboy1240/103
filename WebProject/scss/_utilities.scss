@@ -1,0 +1,52 @@
+
+.btn { 
+  
+  background: $light-color;
+  color: #333;
+  padding: 7px;
+  cursor: pointer;
+  font-size: 2rem;  
+  transition: all 0.2s ease-in;
+
+  &.btn-primary {
+    @include set-background($primary-color);
+    &:hover {
+      background: lighten($primary-color, 5%);
+    }
+  }
+
+  &.btn-dark {
+    @include set-background($dark-color);
+    &:hover {
+      background: lighten($dark-color, 5%);
+      color: #fff;
+    }
+  }
+
+  &.btn-light {
+    border-radius: 7px;
+    @include set-background($light-color);
+    &:hover {
+      background: lighten($dark-color, 20%);
+      color: #fff;
+    }
+  }
+
+  &.btn-danger {
+    @include set-background($danger-color);
+    &:hover {
+      background: lighten($danger-color, 20%);
+      color: #fff;
+    }
+  }
+
+  &.btn-success {
+    @include set-background($success-color);
+    &:hover {
+      background: lighten($success-color, 20%);
+      color: #fff;
+    }
+  }
+
+}
+
